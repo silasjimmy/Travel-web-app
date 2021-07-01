@@ -6,11 +6,11 @@
     <title>Travel web app</title>
   </head>
   <body>
-    <header>
+    <header class="border">
       <h1>travel planner</h1>
     </header>
     <main>
-      <section class="form__section">
+      <section class="form__section border">
         <form>
           <div class="input__field">
             <label for="location">My trip to:</label>
@@ -20,11 +20,14 @@
             <label for="date">Departing:</label>
             <input type="text" name="date" placeholder="MM/DD/YYYY">
           </div>
+          <div class="submit">
+            <input type="submit" name="submit" value="Submit">
+          </div>
         </form>
       </section>
-      <section class="results__section">
-        <figure>
-          <!-- <img src="#" alt="city image"> -->
+      <section class="results__section border">
+        <figure class="border">
+          <img src="sample.jpg" alt="city image">
         </figure>
         <div class="plan">
           <h2>My trip to: <span id="city">Paris, France</span></h2>
@@ -47,7 +50,7 @@
         <!-- TODO:  -->
       </section>
     </main>
-    <footer>
+    <footer class="border">
       <span>&copySilas Jimmy</span>
       <span>All rights reserved</span>
     </footer>
