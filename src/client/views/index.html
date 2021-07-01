@@ -2,9 +2,54 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel web app</title>
   </head>
   <body>
-    <h1>Hi there!</h1>
+    <header>
+      <h1>travel planner</h1>
+    </header>
+    <main>
+      <section class="form__section">
+        <form>
+          <div class="input__field">
+            <label for="location">My trip to:</label>
+            <input type="text" name="location" placeholder="Enter location">
+          </div>
+          <div class="input__field">
+            <label for="date">Departing:</label>
+            <input type="text" name="date" placeholder="MM/DD/YYYY">
+          </div>
+        </form>
+      </section>
+      <section class="results__section">
+        <figure>
+          <!-- <img src="#" alt="city image"> -->
+        </figure>
+        <div class="plan">
+          <h2>My trip to: <span id="city">Paris, France</span></h2>
+          <h2>Departing: <span id="date">02/12/2020</span></h2>
+        </div>
+        <div class="actions">
+          <button>save trip</button>
+          <button>remove trip</button>
+        </div>
+        <div class="rem__days">
+          <h3><span id="city">Paris, France</span> is <span id="days">220 days away</span></h3>
+        </div>
+        <div class="weather">
+          <h3>Typical weather for then is:</h3>
+          <p id="desc-1">High-46, Low-35</p>
+          <p id="desc-2">Mostly cloudy throughout the day</p>
+        </div>
+      </section>
+      <section class="saved__trips">
+        <!-- TODO:  -->
+      </section>
+    </main>
+    <footer>
+      <span>&copySilas Jimmy</span>
+      <span>All rights reserved</span>
+    </footer>
   </body>
 </html>
