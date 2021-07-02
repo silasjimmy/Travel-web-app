@@ -30,39 +30,43 @@
         </form>
       </section>
       <h2 class="section__title">Results</h2>
-      <section class="results__section">
-        <figure class="image">
-          <img src="sample.jpg" alt="city image">
-        </figure>
-        <div class="plan">
-          <h2>My trip to: <span id="city">Paris, France</span></h2>
-          <h2>Departing: <span id="date">02/12/2020</span></h2>
-        </div>
-        <div class="actions">
-          <button>save trip</button>
-          <button>remove trip</button>
-        </div>
-        <div class="rem__days">
-          <h3><span id="city">Paris, France</span> is <span id="days">220 days away</span></h3>
-        </div>
-        <div class="weather">
-          <h3>Typical weather for then is:</h3>
-          <p id="desc-1">High-46, Low-35</p>
-          <p id="desc-2">Mostly cloudy throughout the day</p>
-        </div>
-      </section>
+      <template id="results">
+        <section class="results__section">
+          <figure class="image">
+            <img src="sample.jpg" alt="city image">
+          </figure>
+          <div class="plan">
+            <h2>My trip to: <span id="city">Paris, France</span></h2>
+            <h2>Departing: <span id="date">02/12/2020</span></h2>
+          </div>
+          <div class="actions">
+            <button>save trip</button>
+            <button>remove trip</button>
+          </div>
+          <div class="rem__days">
+            <h3><span id="city">Paris, France</span> is <span id="days">220 days away</span></h3>
+          </div>
+          <div class="weather">
+            <h3>Typical weather for then is:</h3>
+            <p id="desc-1">High-46, Low-35</p>
+            <p id="desc-2">Mostly cloudy throughout the day</p>
+          </div>
+        </section>
+      </template>
       <h2 class="section__title">Saved trips</h2>
-      <section class="saved">
-        <div class="card">
-          <div class="image">
-            <img src="#" alt="city image">
+      <template id="saved">
+        <section class="saved">
+          <div class="card">
+            <div class="image">
+              <img src="#" alt="city image">
+            </div>
+            <div class="details">
+              <h3 id="city">Paris, France</h3>
+              <span id="date">12th Febuary 2020</span>
+            </div>
           </div>
-          <div class="details">
-            <h3 id="city">Paris, France</h3>
-            <span id="date">12th Febuary 2020</span>
-          </div>
-        </div>
-      </section>
+        </section>
+      </template>
     </main>
     <footer class="border">
       <span>&copySilas Jimmy</span>
