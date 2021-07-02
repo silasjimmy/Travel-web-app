@@ -3,14 +3,18 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jomhuria&family=Noto+Sans+JP:wght@100&family=Roboto&family=Tourney&display=swap" rel="stylesheet">
     <title>Travel web app</title>
   </head>
   <body>
-    <header class="border">
+    <header>
       <h1>travel planner</h1>
     </header>
     <main>
-      <section class="form__section border">
+      <section class="form__section">
         <form>
           <div class="input__field">
             <label for="location">My trip to:</label>
@@ -25,8 +29,9 @@
           </div>
         </form>
       </section>
-      <section class="results__section border">
-        <figure class="border">
+      <h2 class="section__title">Results</h2>
+      <section class="results__section">
+        <figure class="image">
           <img src="sample.jpg" alt="city image">
         </figure>
         <div class="plan">
@@ -46,8 +51,17 @@
           <p id="desc-2">Mostly cloudy throughout the day</p>
         </div>
       </section>
-      <section class="saved__trips">
-        <!-- TODO:  -->
+      <h2 class="section__title">Saved trips</h2>
+      <section class="saved">
+        <div class="card">
+          <div class="image">
+            <img src="#" alt="city image">
+          </div>
+          <div class="details">
+            <h3 id="city">Paris, France</h3>
+            <span id="date">12th Febuary 2020</span>
+          </div>
+        </div>
       </section>
     </main>
     <footer class="border">

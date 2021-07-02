@@ -1,8 +1,51 @@
+@import "variables";
+
 .results__section {
   text-align: center;
   padding: 1em 0;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: minmax(100px, 200px);
+  grid-gap: 0.2em;
+  background-color: $red-lighten-1;
 
-  figure {
-    height: 200px;
+  .image {
+    grid-area: 1/1/1/1;
+  }
+
+  .plan {
+    grid-area: 2/1/3/1;
+
+    h2 {
+      font-family: 'Roboto', sans-serif;
+      font-size: $fs-small;
+    }
+  }
+
+  .actions {
+    grid-area: 4/1/5/1;
+  }
+
+  .rem__days {
+    grid-area: 6/1/7/1;
+
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: $fs-xsmall;
+    }
+  }
+
+  .weather {
+    grid-area: 8/1/10/1;
+
+    h3 {
+      font-family: 'Roboto', sans-serif;
+      font-size: $fs-xsmall;
+    }
+
+    p {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 100;
+    }
   }
 }

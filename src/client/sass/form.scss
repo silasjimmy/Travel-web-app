@@ -1,4 +1,11 @@
+@import "variables";
+
 .form__section {
   padding: 1.5em 0;
   text-align: center;
+  background-color: $grey-lighten-2;
+
+  .input__field {
+    margin: 0.5em 0;
+  }
 }

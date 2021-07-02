@@ -2,21 +2,34 @@
   border: 1px solid black;
 }
 
+@import "variables";
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  min-height: 100vh;
+  // min-height: 100vh;
+  background-color: $grey-lighten-1;
 
   header {
     text-align: center;
-    padding: 1em 0;
+    padding: 0.5em 0;
 
     h1 {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 200;
       text-transform: capitalize;
+      font-size: $fs-large;
     }
+  }
+
+  .section__title {
+    font-family: 'Tourney', cursive;
+    font-weight: 500;
+    text-align: center;
+    font-size: $fs-meduim;
   }
 
   h2 {
@@ -37,7 +50,10 @@ body {
 
   input[type="text"] {
     border: none;
-    padding: 0.6em 0.3em;
+    margin-left: 0.2em;
+    background-color: $grey-lighten-2;
+    font-size: $fs-small;
+    width: 200px;
 
     &:focus {
       border-bottom: 1px solid black;
@@ -52,26 +68,43 @@ body {
   }
 
   label {
-    font-weight: bold;
+    font-weight: 400;
+    font-family: 'Jomhuria', cursive;
+    font-size: $fs-xlarge;
   }
 
   ::placeholder {
-    font-weight: bold;
+    font-weight: 400;
+    font-family: 'Jomhuria', cursive;
+    font-size: $fs-xlarge;
   }
 
   input[type="submit"], button {
     text-transform: lowercase;
-    padding: 0.5em;
-    border: 3px solid;
+    padding: 0.3em 0.5em;
+    border: 2px solid;
     margin: 1em;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: $fs-xsmall;
+    cursor: pointer;
+
+    &:hover {
+      padding: 0.4em 0.6em;
+      transition: padding .2s ease-in-out;
+    }
   }
 
   footer {
     position: relative;
+    background-color: $grey-darken-1;
     bottom: 0;
     width: 100%;
     padding: 1em;
     display: flex;
     justify-content: space-between;
+
+    span {
+      color: $grey-lighten-1;
+    }
   }
 }
