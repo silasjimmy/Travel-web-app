@@ -18,11 +18,11 @@
         <form onsubmit="return Client.formHandler(event)">
           <div class="input__field">
             <label for="location">My trip to:</label>
-            <input type="text" name="location" placeholder="Enter location">
+            <input id="input-location" type="text" name="location" placeholder="Enter location">
           </div>
           <div class="input__field">
             <label for="date">Departing:</label>
-            <input type="text" name="date" placeholder="MM/DD/YYYY">
+            <input id="input-date" type="text" name="date" placeholder="MM/DD/YYYY">
           </div>
           <div class="submit">
             <input id="submit" type="submit" name="" value="submit" onsubmit="return Client.formHandler(event)">
@@ -36,7 +36,7 @@
               <img src="sample.jpg" alt="city image">
             </figure>
             <div class="plan">
-              <h2>My trip to: <span id="city">Paris, France</span></h2>
+              <h2>My trip to: <span id="city"></span></h2>
               <h2>Departing: <span id="date">02/12/2020</span></h2>
             </div>
             <div class="actions">

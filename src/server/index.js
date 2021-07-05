@@ -1,35 +1,57 @@
 const dotenv = require('dotenv');
 dotenv.config();
 
-const apiDetails = {
-  'key': process.env.API_KEY
+let trips = []
+
+// Environment variables
+const env = {
+  'geonameUsername': process.env.GEONAME_USERNAME,
+  'weatherbitKey': process.env.WEATHERBIT_KEY,
+  'pixabayKey': process.env.PIXABAY_KEY
 }
 
 var path = require('path')
 const express = require('express')
-const mockAPIResponse = require('./mockAPI.js')
-console.log(mockAPIResponse);
+var bodyParser = require('body-parser')
+var cors = require('cors')
+const axios = require('axios')
 
+// Create the express app
 const app = express()
 
+// Use CORS
+app.use(cors())
+
+// Use json
+app.use(bodyParser.json())
+
+// Use url encoded values
+app.use(bodyParser.urlencoded({
+  extended: true
+}))
+
+// Specify which static files to use
 app.use(express.static('dist'))
 
-console.log(__dirname)
-
-app.get('/', function (req, res) {
+/* Routes */
+// Home route
+app.get('/', (req, res) => {
     res.sendFile('dist/index.html')
-    // res.sendFile(path.resolve('src/client/views/index.html'))
 })
 
-// designates what port the app will listen to for incoming requests
-app.listen(8080, function () {
-    console.log('Example app listening on port 8080!')
+app.get('/getEnv', (request, response) => {
+  response.send(env)
 })
 
-app.get('/test', function (req, res) {
-    res.send(mockAPIResponse)
+app.get('/allTrips', (request, response) => {
+  response.send(trips)
 })
 
-app.get('/getKey', (request, response) => {
-  response.send(apiDetails)
+app.post('/addTrip', (request, response) => {
+  console.log(request);
+})
+
+// Designates what port the app will listen to for incoming requests
+app.listen(8081, function () {
+    console.log('App listening on port 8081...')
 })
