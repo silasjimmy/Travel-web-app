@@ -5,7 +5,7 @@ let trips = []
 
 // Environment variables
 const env = {
-  'geonameUsername': process.env.GEONAME_USERNAME,
+  'geonameKey': process.env.GEONAME_USERNAME,
   'weatherbitKey': process.env.WEATHERBIT_KEY,
   'pixabayKey': process.env.PIXABAY_KEY
 }
@@ -39,7 +39,7 @@ app.get('/', (req, res) => {
     res.sendFile('dist/index.html')
 })
 
-app.get('/getEnv', (request, response) => {
+app.get('/getKeys', (request, response) => {
   response.send(env)
 })
 
@@ -48,7 +48,7 @@ app.get('/allTrips', (request, response) => {
 })
 
 app.post('/addTrip', (request, response) => {
-  console.log(request);
+  trips.push(request.body)
 })
 
 // Designates what port the app will listen to for incoming requests

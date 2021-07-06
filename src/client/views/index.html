@@ -33,37 +33,36 @@
         <section class="results__section">
           <template id="results">
             <figure class="image">
-              <img src="sample.jpg" alt="city image">
+              <img>
             </figure>
             <div class="plan">
               <h2>My trip to: <span id="city"></span></h2>
-              <h2>Departing: <span id="date">02/12/2020</span></h2>
+              <h2>Departing: <span id="date"></span></h2>
             </div>
             <div class="actions">
-              <button>save trip</button>
-              <button>remove trip</button>
+              <button id="save-trip">save trip</button>
+              <button id="remove-trip">remove trip</button>
             </div>
             <div class="rem__days">
-              <h3><span id="city">Paris, France</span> is <span id="days">220 days away</span></h3>
+              <h3><span id="place"></span> is <span id="days"></span> days away</h3>
             </div>
             <div class="weather">
               <h3>Typical weather for then is:</h3>
-              <p id="desc-1">High-46, Low-35</p>
-              <p id="desc-2">Mostly cloudy throughout the day</p>
+              <p id="desc-1"></p>
+              <p id="desc-2"></p>
+              <p id="desc-3"></p>
             </div>
           </template>
         </section>
       <h2 class="section__title">Saved trips</h2>
         <section class="saved">
           <template id="saved">
-            <div class="card">
-              <div class="image">
-                <img src="#" alt="city image">
-              </div>
-              <div class="details">
-                <h3 id="city">Paris, France</h3>
-                <span id="date">12th Febuary 2020</span>
-              </div>
+            <div class="image">
+              <img>
+            </div>
+            <div class="details">
+              <h3 id="place"></h3>
+              <span id="date"></span>
             </div>
           </template>
         </section>
