@@ -53,7 +53,13 @@ const saveTrip = (e) => {
   }
 
   // Save the trip details
-  postTravelData("http://127.0.0.1:8081/addTrip", tripDetails);
+  postTravelData("http://127.0.0.1:8081/addTrip", tripDetails)
+
+  // Create a trip card in the saved section
+  Client.createTripCard(tripDetails);
+
+  // Remove the results on display
+  parent.remove();
 }
 
 // Removes the details of a trip
@@ -74,12 +80,6 @@ const postTravelData = async(url, data) => {
     },
     body: JSON.stringify(data),
   });
-
-  try {
-    const newData = await response.json();
-  } catch (e) {
-    console.log(e);
-  }
 }
 
 export {
