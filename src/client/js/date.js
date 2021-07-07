@@ -1,13 +1,12 @@
 const moment = require('moment')
 
 const parseDate = (date) => {
-  const day = moment(date, 'MM DD YYYY')
-
-  if (day.isValid()) {
-    return true
+  const isValid = Date.parse(date)
+  if (isNaN(isValid)) {
+    return false
   }
 
-  return false
+  return true
 }
 
 // Calculates the number of days in between the two dates
@@ -23,9 +22,10 @@ const calculateDays = (date) => {
 }
 
 const formatStringDate = (date) => {
-  const day = moment(date, 'MM-DD-YYYY')
-  const dateString = day.toDate()
-  return dateString.toDateString()
+  // const day = moment(date, 'MM-DD-YYYY')
+  // const dateString = day.toDate()
+  // return dateString.toDateString()
+  return moment(date).format('dddd, MMMM Do YYYY')
 }
 
 export {

@@ -1,19 +1,19 @@
-const dotenv = require('dotenv');
-dotenv.config();
+const dotenv = require('dotenv')
+dotenv.config()
 
-let trips = []
+const trips = []
 
 // Environment variables
 const env = {
-  'geonameKey': process.env.GEONAME_USERNAME,
-  'weatherbitKey': process.env.WEATHERBIT_KEY,
-  'pixabayKey': process.env.PIXABAY_KEY
+  geonameKey: process.env.GEONAME_USERNAME,
+  weatherbitKey: process.env.WEATHERBIT_KEY,
+  pixabayKey: process.env.PIXABAY_KEY
 }
 
-var path = require('path')
+const path = require('path')
 const express = require('express')
-var bodyParser = require('body-parser')
-var cors = require('cors')
+const bodyParser = require('body-parser')
+const cors = require('cors')
 const axios = require('axios')
 
 // Create the express app
@@ -36,7 +36,7 @@ app.use(express.static('dist'))
 /* Routes */
 // Home route
 app.get('/', (req, res) => {
-    res.sendFile('dist/index.html')
+  res.sendFile('dist/index.html')
 })
 
 app.get('/getKeys', (request, response) => {
@@ -53,5 +53,5 @@ app.post('/addTrip', (request, response) => {
 
 // Designates what port the app will listen to for incoming requests
 app.listen(8081, function () {
-    console.log('App listening on port 8081...')
+  console.log('App listening on port 8081...')
 })

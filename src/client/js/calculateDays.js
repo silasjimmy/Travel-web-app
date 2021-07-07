@@ -1,11 +1,14 @@
 // Calculates the number of days in between the two dates
 const calculateDays = (date) => {
   try {
-    let dateObj = Date.parse(new Date(date))
-    let today = Date.now()
-    let secs = dateObj - today
+    const dateObj = Date.parse(new Date(date))
+    const today = Date.now()
+    const secs = dateObj - today
 
-    return Math.ceil(secs / 86400000);
+    return 20
+
+    // return (secs / 86400000)
+    // return Math.floor(secs / 86400000)
   } catch (e) {
     return e
   }
