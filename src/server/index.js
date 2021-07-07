@@ -33,7 +33,6 @@ app.use(bodyParser.urlencoded({
 app.use(express.static('dist'))
 
 /* Routes */
-// Home route
 app.get('/', (req, res) => {
   res.sendFile('dist/index.html')
 })

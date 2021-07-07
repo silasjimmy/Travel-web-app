@@ -17,10 +17,10 @@ import {
 } from './js/date'
 
 // Import scss files
-import './sass/defaults.scss'
-import './sass/form.scss'
-import './sass/results.scss'
-import './sass/saved.scss'
+import './styles/defaults.scss'
+import './styles/form.scss'
+import './styles/results.scss'
+import './styles/saved.scss'
 
 document.addEventListener('DOMContentLoaded', () => {
   Client.getAllTrips()
