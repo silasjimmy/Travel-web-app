@@ -15,7 +15,9 @@ const calculateDays = (date) => {
     const dateObj = Date.parse(new Date(date))
     const today = Date.now()
     const secs = dateObj - today
-    return Math.ceil(secs / 86400000)
+    const days = Math.floor(secs / 86400000)
+
+    return days + 1
   } catch (e) {
     return e
   }

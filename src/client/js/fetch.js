@@ -1,6 +1,7 @@
 const geonameBaseUrl = 'http://api.geonames.org/searchJSON?username='
 const geonameSuffixUrl = '&maxRows=1&style=LONG'
-const weatherbitBaseUrl = 'https://api.weatherbit.io/v2.0/forecast/daily?days='
+const weatherbitForecastUrl = 'https://api.weatherbit.io/v2.0/forecast/daily?days='
+const weatherbitCurrentUrl = 'https://api.weatherbit.io/v2.0/current?include=minutely'
 const pixabayBaseUrl = 'https://pixabay.com/api/?q='
 const pixabaySuffixUrl = '+buildings&image_type=photo&orientation=horizontal&safesearch=true&category=travel'
 
@@ -13,7 +14,15 @@ const getGeonameData = async (username, location) => {
 
 // Fetches the weather data given the longitude and latitude
 const getWeatherdata = async (lon, lat, days, key) => {
-  const response = await fetch(`${weatherbitBaseUrl}${days}&lat=${lat}&lon=${lon}&key=${key}`)
+  let url = ''
+
+  if (days === 0) {
+    url = `${weatherbitCurrentUrl}&lat=${lat}&lon=${lon}&key=${key}`
+  } else {
+    url = `${weatherbitForecastUrl}${days}&lat=${lat}&lon=${lon}&key=${key}`
+  }
+
+  const response = await fetch(url)
   const data = response.json()
   return data
 }
