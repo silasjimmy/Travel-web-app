@@ -24,10 +24,7 @@ const calculateDays = (date) => {
 }
 
 const formatStringDate = (date) => {
-  // const day = moment(date, 'MM-DD-YYYY')
-  // const dateString = day.toDate()
-  // return dateString.toDateString()
-  return moment(date).format('dddd, MMMM Do YYYY')
+  return moment(date, 'MM/DD/YYYY').format('dddd, MMMM Do YYYY')
 }
 
 export {
